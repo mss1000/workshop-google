@@ -1,5 +1,5 @@
 provider "google" {
-  credentials = file(var.account_file_path)
+  credentials = var.account_cred
   project     = var.gcloud-project
   region      = var.gcloud-region
 }
