@@ -14,9 +14,13 @@ variable "gcloud-zone" {
   default = "us-east1-b"
 }
 
-variable "account_file_path" {
-  description = "Path to GCP account file"
+variable "gcp_credentials" {
+  description = "GCP credentials needed by google provider"
 }
+
+#variable "account_file_path" {
+ # description = "Path to GCP account file"
+#}
 
 variable "key_ring" {
   description = "Cloud KMS key ring name to create"
