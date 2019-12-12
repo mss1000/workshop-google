@@ -4,7 +4,7 @@
 #    * account_file_path - the full path to your Cloud IAM service account file location
 #-------------------------------------------------------------------------------------------
 gcloud-project = "dwright-gcp-demos"#"<PROJECT_ID>"
-account_file_path =  "" #"<ACCOUNT_FILE_PATH>"
+account_creds =  "" #"<ACCOUNT_FILE_PATH>"
 
 
 #----------------------------------------------------------------------------------------------
