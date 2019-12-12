@@ -15,10 +15,7 @@ KMS](https://learn.hashicorp.com/vault/operations/autounseal-gcp-kms) guide.
 
     ```shell
     gcloud-project = "vault-test"
-    account_file_path = "/tmp/GCP/my-service-account.json"
     ```
-
-    > Set the `account_file_path` to where your Cloud IAM service account file is located. This is the service account that the Terraform uses to provision GCP resources. If you do not have one, follow the [GCP documentation](https://cloud.google.com/docs/authentication/getting-started) to create a service account and download the JSON file.
 
 1. This guide expects a Cloud KMS key ring and crypto key to already exists. If you **don't** have one to use for Vault auto-unseal, un-comment the key ring and key creation portion in the `main.tf` file.  **NOTE:** Keep line 93 commented out and use line 92.
 
@@ -79,18 +76,6 @@ KMS](https://learn.hashicorp.com/vault/operations/autounseal-gcp-kms) guide.
         "serviceAccount:${var.service_acct_email}",
       ]
     }
-    ```
-
-1. Terraform commands:
-
-    ```shell
-    # Pull necessary plugins
-    $ terraform init
-
-    $ terraform plan
-
-    # Output provides the SSH instruction
-    $ terraform apply
     ```
 
 1. [SSH into the compute instance](https://cloud.google.com/compute/docs/instances/connecting-to-instance)
