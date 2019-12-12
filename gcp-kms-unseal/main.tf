@@ -1,5 +1,5 @@
 provider "google" {
-  credentials = var.account_cred
+  credentials = var.account_creds
   project     = var.gcloud-project
   region      = var.gcloud-region
 }
