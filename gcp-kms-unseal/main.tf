@@ -1,5 +1,5 @@
 provider "google" {
-  credentials = gcp_credentials #file(var.account_file_path)
+  credentials = var.gcp_credentials #file(var.account_file_path)
   project     = var.gcloud-project
   region      = var.gcloud-region
 }
