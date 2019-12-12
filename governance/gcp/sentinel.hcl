@@ -3,5 +3,5 @@ policy "enforce-mandatory-labels" {
 }
 
 policy "restrict-gce-machine-type" {
-    enforcement_level = "advisory"
+    enforcement_level = "soft-mandatory"
 }
